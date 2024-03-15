@@ -15,6 +15,12 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+
+            backgroundImage:{
+                'bg1' :" url('../../assets/bg1.jpg')",
+                'bg2' : "url('../../assets/bg2.jpg')",
+                'bg3' :" url('../../assets/bg3.jpg')"
+            }
         },
     },
 
