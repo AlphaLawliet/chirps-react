@@ -16,7 +16,7 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
         >
             <Head title="Profile" />
 
-            <div className="py-12 w-full">
+            <div className="py-12 px-5 w-full">
                 <div className="max-w-[700px] mx-auto sm:px-6 lg:px-8 space-y-6 bg-gray-100 py-8 rounded-xl">
                     <div className="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                         <UpdateProfileInformationForm

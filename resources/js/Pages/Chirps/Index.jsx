@@ -19,7 +19,7 @@ export default function Index({ auth, chirps }) {
         <AuthenticatedLayout user={auth.user}>
             <Head title="Chirps" />
 
-            <div className="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8 mt-5 bg-gray-100 shadow-md rounded-xl ">
+            <div className=" overflow-y-auto max-w-2xl w-full  mx-7 p-4 sm:p-6 lg:p-8 bg-gray-100 rounded-t-xl  ">
                 <form onSubmit={submit}>
                     <textarea
                         value={data.message}
@@ -33,7 +33,7 @@ export default function Index({ auth, chirps }) {
                     </PrimaryButton>
                 </form>
 
-                <div className="mt-6  shadow-sm rounded-lg divide-y">
+                <div className="mt-6  shadow-sm rounded-lg divide-y bg-gray-100  ">
                     {chirps.map((chirp) => (
                         <Chirp key={chirp.id} chirp={chirp} />
                     ))}

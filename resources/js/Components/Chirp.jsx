@@ -27,7 +27,7 @@ export default function Chirp({ chirp }) {
     };
 
     return (
-        <div className="p-6 flex space-x-2 bg-gray-100   ">
+        <div className="p-6 flex space-x-2 bg-gray-100 shadow-md  h-full  ">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 text-gray-600 -scale-x-100"
@@ -51,7 +51,6 @@ export default function Chirp({ chirp }) {
                         </small>
                         {chirp.created_at !== chirp.updated_at && (
                             <small className="text-sm text-gray-600">
-                                {" "}
                                 &middot; edited
                             </small>
                         )}

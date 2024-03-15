@@ -4,6 +4,9 @@ import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link } from "@inertiajs/react";
+import bg3 from "../../assets/bg3.jpg";
+import bg2 from "../../assets/bg2.jpg";
+import Notification from "@/Components/Notification";
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
@@ -14,8 +17,20 @@ export default function Authenticated({ user, header, children }) {
     };
 
     return (
-        <div className=" px-10 pt-5 bg-red-300">
-            <section className=" flex gap-x-5 items-center">
+        <>
+            {/* background Image ----*/}
+            <img
+                src={bg3}
+                alt="background"
+                className=" fixed -z-0  w-full h-screen  object-cover  opacity-50 "
+            />
+            <img
+                src={bg2}
+                alt="background"
+                className=" fixed -z-10  w-full h- object-cover  opacity-50 "
+            />
+
+            <section className=" pt-5 fixed z-20  pl-10 flex gap-x-5 items-center">
                 <h1 className=" text-2xl font-extrabold text-blue-500 ">
                     Chirp
                 </h1>
@@ -42,7 +57,7 @@ export default function Authenticated({ user, header, children }) {
                 </Link>
             </section>
 
-            <section className=" fixed right-10 top-5 w-fit  text-end">
+            <section className=" fixed z-50 right-10 top-5 w-fit  text-end ">
                 <div className=" flex gap-x-3 w-full  justify-end">
                     <svg
                         width="800px"
@@ -67,6 +82,7 @@ export default function Authenticated({ user, header, children }) {
                     </button>
                 </div>
 
+                {/* dropdown menu---------------------------         */}
                 <ul
                     className={` relative  pt-3 mt-2  flex flex-col py-3  px-4 rounded-xl shadow-md gap-y-2 text-start bg-gray-100   ${
                         showingNavigationDropdown ? "flex-auto" : "hidden"
@@ -115,7 +131,11 @@ export default function Authenticated({ user, header, children }) {
                     </Link>
                 </ul>
             </section>
-            <main className=" ">{children}</main>
-        </div>
+            <div className=" flex flex-row">
+                <main className=" relative z-0 top-20 lg:top-16  flex w-full justify-center   ">
+                    {children}
+                </main>
+            </div>
+        </>
     );
 }
